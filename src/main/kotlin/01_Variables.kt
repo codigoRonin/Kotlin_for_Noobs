@@ -1,6 +1,6 @@
 fun main() {
 
-    //TIPOS DE DATOS
+    // TIPOS DE DATOS
     /*
         •	Tipo texto (String), representados con comillas dobles
         •	Tipo carácter (Char), representados con comillas simples
@@ -13,9 +13,9 @@ fun main() {
             (2 bytes y 1 byte, respectivamente)
       */
 
-// DECLARACION DE VARIABLES
+    // DECLARACION DE VARIABLES
 
-    //INFERENCIA DE TIPO
+    // INFERENCIA DE TIPO
 
         var nombre = "Michel"
         var numero = 123
@@ -27,21 +27,5 @@ fun main() {
     var nota : Double = 8.75
     var letra : Char = 's'
     var existe : Boolean = true
-
-//CONSTANTES
-
-    val fichero = "datos.dat"
-  //  const val FICHERO = "datos.dat"
-
-    val xPos: Int = 1 // Asignación junto a declaración
-    val yPos: Int   // Declaración
-    yPos = 5    // Asignación
-
-    println(xPos)
-    println(yPos)
-
-//    yPos= 6 // Kotlin: Val cannot be reassigned
-//    println(yPos)
-
 
 }
