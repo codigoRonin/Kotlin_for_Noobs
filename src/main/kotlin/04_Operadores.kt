@@ -33,6 +33,21 @@ fun main(){
 //    == 	Igual que
 //    != 	Distinto de
 
+    val input = 5
+    var result: Boolean
+
+    val greaterThanZero = input > 0
+    val isEven = input % 2 == 0
+
+    result = greaterThanZero && isEven
+    println("Es mayor que cero y par:$result")
+
+    result = greaterThanZero || isEven
+    println("Es mayor que cero o par:$result")
+
+    result = greaterThanZero && !isEven
+    println("Es mayor que cero e impar:$result")
+
     // OPERADORES DE ASIGNACIÓN
 
 //    = 	Asignación simple
@@ -42,8 +57,9 @@ fun main(){
 //    /= 	Autodivisión
 //    %= 	Autoresto
 
-    a= 10
-    b= 20
+    a = 10
+    b = 20
+
     a += b
     println("+= $a")
     a -= b

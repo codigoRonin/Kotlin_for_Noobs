@@ -23,7 +23,7 @@ fun main(){
     // CONSTANTES
     // Las constantes se declaran anteponiendo const a la construcción anterior.
 
- //   const val FICHERO = "datos.dat" //  deben declararse fuera del ámbito
+//  const val FICHERO = "datos.dat" //  deben declararse fuera del ámbito
 
     // DIFERENCIAS
 
