@@ -17,8 +17,9 @@ fun main() {
     println("3.- Sacar dinero")
     println("4.- Salir")
 
-    val option = readLine()?.toInt()
+    val option = readlnOrNull()?.toInt()
     var balance = 100.00
+
     when (option) {
         VIEW_BALANCE -> {
             println("Tu saldo es de ${balance} €")
@@ -26,19 +27,19 @@ fun main() {
 
         INPUT_MONEY -> {
             println("Cuanto dinero vas a ingresar:")
-            var inputMoney = readLine()!!.toDouble()
-            balance = balance + inputMoney
+            val inputMoney = readln().toDouble()
+            balance += inputMoney
             println("Opracion realizada con exito, tu saldo es: ${balance} € ")
         }
 
         OUTPUT_MONEY -> {
             println("Cuanto dinero vas a a sacar:")
-            var outputMoney = readLine()!!.toDouble()
+            val outputMoney = readlnOrNull()!!.toDouble()
             if ((balance - outputMoney) < 0) {
                 println("No tienes tanto dinero!!!")
                 println("Tu saldo es: $${balance}  ")
             } else {
-                balance = balance - outputMoney
+                balance -= outputMoney
                 println("Opracion realizada con exito, tu saldo es: $${balance}  ")
             }
         }

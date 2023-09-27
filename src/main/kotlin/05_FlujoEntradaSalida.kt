@@ -1,4 +1,4 @@
-fun main(){
+fun main() {
 
     // MOSTRAR DATOS
 
@@ -13,8 +13,12 @@ fun main(){
 
     // LEER DATOS
 
-    print("Dime tu nombre:")
-    val name = readLine()
+    print("Dime tu nombre: ")
+    val name = readLine() // o val name = readln()
 
-    print("¡Bienvenido $name!")
+    print("Dime tu apellido: ")
+    val surname = readlnOrNull()
+
+    print("¡Bienvenido $name & $surname")
+
 }
