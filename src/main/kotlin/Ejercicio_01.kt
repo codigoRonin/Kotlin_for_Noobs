@@ -1,4 +1,4 @@
-// Realizar menú bancario (cajero)) que reciba y entregue dinero con las siguientes opciones:
+// Realizar menú bancario (cajero) que reciba y entregue dinero con las siguientes opciones:
     //1.- Ver saldo
     //2.- Ingresar dinero
     //3.- Sacar dinero
