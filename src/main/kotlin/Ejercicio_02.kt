@@ -7,3 +7,16 @@ con un salto de línea entre  * cada impresión), sustituyendo los siguientes:
 
  */
 
+fun main() {
+
+    for (index in 1..100) {
+        if (index % 3 == 0 && index % 5 == 0)
+            println("FizzBuzz")
+        else if (index % 3 == 0)
+            println("Fizz")
+        else if (index % 5 == 0)
+            println("Buzz")
+        else
+            println(index)
+    }
+}
