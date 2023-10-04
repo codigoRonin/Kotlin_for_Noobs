@@ -2,7 +2,7 @@ fun main(){
 
     //DECLARACIÓN DE FUNCIONES
     
-        //Las funciones en Kotlin se definen con la palabra fun seguida del nombre de la función
+        //  Las funciones en Kotlin se definen con la palabra fun seguida del nombre de la función
         // y, entre paréntesis, los parámetros que necesite, indicando el tipo de cada uno.
 
         // La siguiente función permite mostrar un mensaje de saludo al nombre que se le pasa como parámetro:
@@ -37,6 +37,7 @@ fun main(){
             greet("Michel")
             val result = add(3, 2)
             println(result)
+            println(add(3, 2))
 
 // FUNCIONES CON CUERPO DE EXPRESIÓN
 
@@ -44,6 +45,10 @@ fun main(){
     // Donde la expresión es ubicada luego del signo = en línea con la firma de la función.
 
     fun model(x: Int, y: Int, z: Int) = 3 * x - 2 * y + z * z
+
+    fun equalsModel (x: Int, y: Int, z: Int): Int {
+        return 3 * x - 2 * y + z * z
+    }
 
     println("f(1,0,5)= ${model(1, 0, 5)}")
 

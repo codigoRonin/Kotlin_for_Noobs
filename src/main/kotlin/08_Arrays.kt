@@ -60,8 +60,8 @@ fun main() {
     // Otra opción es usar la función de extensión forEachIndexed(),
     // la cual recibe como parámetros el índice y el valor, y te permite imprimir en el cuerpo:
 
-        planets.forEachIndexed { i, v ->
-            println("$v está en la posición ${i+1}")
+        planets.forEachIndexed { index, value ->
+            println("$value está en la posición ${index+1}")
         }
 
 // ARRAYS BIDIMENSIONALES

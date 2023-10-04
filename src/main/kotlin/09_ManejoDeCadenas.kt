@@ -27,7 +27,7 @@ fun main(){
 
     // Si quieres saber el tamaño de la secuencia de caracteres, accede a la propiedad miembro length del string.
 
-        println(name.length) // 16
+        println(name.length) // 15
 
    // CONCATENAR STRINGS
 
