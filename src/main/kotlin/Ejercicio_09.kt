@@ -7,3 +7,25 @@
 * que los dos numeros solicitadas sean numeros enteros.
 *
 */
+
+fun main() {
+    try {
+        print("Introduce el numerador: ")
+        val numerator = readLine()!!.toInt()
+
+        print("Introduce el denominador: ")
+        val denominator = readLine()!!.toInt()
+
+        if (denominator == 0) {
+            throw ArithmeticException("Error: División por 0 no permitida.")
+        }
+
+        val result = numerator.toDouble() / denominator.toDouble()
+        println("Resultado de la  división: $result")
+
+    } catch (e: NumberFormatException) {
+        println("Error: Ingrese números enteros válidos..")
+    } catch (e: ArithmeticException) {
+        println(e.message)
+    }
+}
