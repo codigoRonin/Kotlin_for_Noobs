@@ -41,6 +41,10 @@ fun main(){
 
         println(booksMap) // {Sinsajo=2010, Yo, Robot=1950, Crimen y castigo=1935, Cien años de soledad=1991}
 
+        // Si no inicializo kotlin no puede hacer inferencia de tipos
+
+        val otherBooksMap: Map<Int,Int> = mutableMapOf()
+
     // OPERACIONES ESCRITURA
 
         booksMap.put("La máquina del tiempo", 1890)
@@ -51,6 +55,7 @@ fun main(){
 
         booksMap.remove("Sinsajo")
         println(booksMap)
+
         // {Yo, Robot=1950, Crimen y castigo=1935, Cien años de soledad=1991, La máquina del tiempo=1895}
 
          println(booksMap.remove("Cien años de soledad", 2015)) // false

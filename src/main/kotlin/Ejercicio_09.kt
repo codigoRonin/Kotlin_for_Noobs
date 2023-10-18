@@ -11,7 +11,7 @@
 fun main() {
     try {
         print("Introduce el numerador: ")
-        val numerator = readLine()!!.toInt()
+        val numerator = readln().toInt()
 
         print("Introduce el denominador: ")
         val denominator = readLine()!!.toInt()
@@ -24,7 +24,7 @@ fun main() {
         println("Resultado de la  división: $result")
 
     } catch (e: NumberFormatException) {
-        println("Error: Ingrese números enteros válidos..")
+        println("Error: Ingrese números enteros válidos.")
     } catch (e: ArithmeticException) {
         println(e.message)
     }

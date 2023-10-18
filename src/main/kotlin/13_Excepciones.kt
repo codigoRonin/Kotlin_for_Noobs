@@ -7,7 +7,6 @@ fun main() {
         // en Kotlin, usa la expresión throw seguido de la instanciación del tipo. Al igual que en Java,
         // la declaración del tipo debe tener como supertipo a la interfaz Throwable.
 
-
             fun countDigits(userInput: String?): Int {
                 if (userInput.isNullOrBlank()) {
                     throw IllegalArgumentException("Entrada inválida, la palabra debe tener al menos un carácter")
