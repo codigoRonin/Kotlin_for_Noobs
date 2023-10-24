@@ -21,3 +21,56 @@
 * los diferentes constructores, crea objetos Persona con estos datos y luego imprime la información de cada
 * persona utilizando el método imprimirInformacion().
 */
+
+class Person(val name: String, val age: Int) {
+    var gender: String = "Desconocido" // valor por defecto
+
+    constructor(name: String, age: Int, gender: String) : this(name, age) {
+        this.gender = gender
+    }
+
+    constructor() : this("Sin nombre", 0)
+
+    fun printInformation() {
+        println("Nombre: $name, Edad: $age, Género: $gender")
+    }
+}
+
+fun main() {
+
+    val people = mutableListOf<Person>()
+
+    for (i in 1..3) {
+        println("Introduce la información de la persona $i:")
+        print("Nombre: ")
+        val name = readlnOrNull() ?: ""
+        print("Edad: ")
+        val age = readlnOrNull()?.toIntOrNull() ?: 0
+        print("Género: ")
+        val gender = readlnOrNull() ?: ""
+
+        val person = if (name.isEmpty()) {
+            Person()
+        } else if (gender.isEmpty()) {
+            Person(name, age)
+        } else {
+            Person(name, age, gender)
+        }
+
+//        val person: Person
+//        if (name.isEmpty()) {
+//            person = Person()
+//        } else if (gender.isEmpty()) {
+//            person = Person(name, age)
+//        } else {
+//            person = Person(name, age, gender)
+//        }
+        people.add(person)
+    }
+
+    println("\nInformación de las personas:")
+    for ((index, person) in people.withIndex()) {
+        println("Persona ${index + 1}:")
+        person.printInformation()
+    }
+}
