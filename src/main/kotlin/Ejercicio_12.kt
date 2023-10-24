@@ -1,5 +1,6 @@
 /*
 * Enunciado
+*
 * Supongamos que estás diseñando un sistema de gestión de una biblioteca y necesitas modelar libros.
 * Crea una clase Libro con las siguientes propiedades y métodos:
 *
@@ -18,13 +19,41 @@
 *
 * Crea un objeto de la clase Libro y realiza las siguientes operaciones:
 *
-*  Inicializa el objeto con los siguientes datos:
+*   Inicializa el objeto con los siguientes datos:
 *      Título: "Cien años de soledad"
 *      Autor: "Gabriel García Márquez"
 *      Año de Publicación: 1967
 *      Género: "Realismo mágico"
 *
-* Imprime los detalles del libro llamando al método imprimirDetalles().
+*   Imprime los detalles del libro llamando al método imprimirDetalles().
 *
-* Llama al método esLibroAntiguo() para determinar si el libro es antiguo o no, e imprime el resultado.
+*   Llama al método esLibroAntiguo() para determinar si el libro es antiguo o no, e imprime el resultado.
  */
+
+class Book(val title: String, val author: String, val publicationYear: Int, val genre: String) {
+    fun printDetails() {
+        println("Título: $title, Autor: $author, Año de Publicación: $publicationYear, " +
+                "Género: $genre")
+    }
+    fun isOldBook(): Boolean {
+        return publicationYear < 2000
+    }
+}
+
+fun main() {
+    val book = Book(
+        title = "Cien años de soledad",
+        author = "Gabriel García Márquez",
+        publicationYear = 1967,
+        genre = "Realismo mágico"
+    )
+
+    println("Detalles:")
+    book.printDetails()
+
+    if (book.isOldBook()) {
+        println("Este libro es antiguo.")
+    } else {
+        println("Este libro no es antiguo.")
+    }
+}
